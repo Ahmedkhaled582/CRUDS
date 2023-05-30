@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cruds system</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+
+<section class="product">
+<div class="container">
+
+  <h1>product</h1>
+
+  <label for="productname">product Name</label>
+  <input type="text" class="form-control mt-2" id="productname">
+  <label for="productprice">product price</label>
+  <input type="text" class="form-control mt-2" id="productprice">
+  <label for="productcateg">product Categorey</label>
+  <input type="text" class="form-control mt-2" id="productcateg">
+  <label for="productdesc">product Description </label>
+  <input type="text" class="form-control mt-2" id="productdesc">
+  <label for="count">product count </label>
+  <input type="text" class="form-control mt-2 w-25" id="count">
+
+  <button onclick="addproduct()" id="submit" class="btn btn-info mt-4">Add product</button>
+  <button onclick="deleteall()" class="btn btn-danger mt-4">delete all</button>
+
+  
+  <input type="text" 
+  onkeyup="searchProduct(this.value)" class="form-control w-50 m-auto my-5"
+   name="" id="search" placeholder="Search by name">
+
+<table class="table table-bordered text-center mt-5">
+  <thead class="bg-dark text-white">
+    <th>ID</th>
+    <th>Product Name</th>
+    <th>Product price</th>
+    <th>Product Categorey</th>
+    <th>Product Description</th>
+    <th>Delete</th>
+    <th>Edit</th>
+  </thead>
+
+  <tbody id="tbody">
+
+  </tbody>
+</table>
+
+</div>
+</section>
+
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
